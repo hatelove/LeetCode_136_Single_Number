@@ -12,7 +12,12 @@ namespace LeetCode_136_Single_Number
         {
             var nums = new int[] {5};
 
-            Assert.AreEqual(5, new Solution().SingleNumber(nums));
+            AssertSingleNumber(nums, 5);
+        }
+
+        private static void AssertSingleNumber(int[] nums, int expected)
+        {
+            Assert.AreEqual(expected, new Solution().SingleNumber(nums));
         }
     }
 
