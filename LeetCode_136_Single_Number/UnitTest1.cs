@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LeetCode_136_Single_Number
@@ -19,7 +20,7 @@ namespace LeetCode_136_Single_Number
     {
         public int SingleNumber(int[] nums)
         {
-            throw new NotImplementedException();
+            return nums[0];
         }
     }
 }
