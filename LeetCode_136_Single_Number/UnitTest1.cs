@@ -27,6 +27,13 @@ namespace LeetCode_136_Single_Number
             var nums = new int[] { 4, 5, 4 };
             AssertSingleNumber(nums, 5);
         }
+
+        [TestMethod]
+        public void nums_4_2_4_7_2_singileNumber_should_be_7()
+        {
+            var nums = new int[] {4, 2, 4, 7, 2};
+            AssertSingleNumber(nums, 7);
+        }
     }
 
     public class Solution
