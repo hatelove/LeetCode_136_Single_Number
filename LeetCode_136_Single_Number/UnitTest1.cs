@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LeetCode_136_Single_Number
 {
@@ -31,7 +28,7 @@ namespace LeetCode_136_Single_Number
         [TestMethod]
         public void nums_4_2_4_7_2_singileNumber_should_be_7()
         {
-            var nums = new int[] {4, 2, 4, 7, 2};
+            var nums = new int[] { 4, 2, 4, 7, 2 };
             AssertSingleNumber(nums, 7);
         }
     }
@@ -40,21 +37,13 @@ namespace LeetCode_136_Single_Number
     {
         public int SingleNumber(int[] nums)
         {
-            var dictionary = new Dictionary<int, bool>();
+            int result = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-                var n = nums[i];
-                if (!dictionary.ContainsKey(n))
-                {
-                    dictionary.Add(n, false);
-                }
-                else
-                {
-                    dictionary[n] = !dictionary[n];
-                }
+                result = result ^ nums[i];
             }
 
-            return dictionary.Where(x => !x.Value).Single().Key;
+            return result;
         }
     }
 }
